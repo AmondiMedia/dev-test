@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Forecast Widget - Customization',
+    'name': 'Forecast Widget - Customization for Odoo',
     'version': '0.1',
     'author': 'Amondi Media d.o.o.',
     'website': 'https://amondi-media.com',
