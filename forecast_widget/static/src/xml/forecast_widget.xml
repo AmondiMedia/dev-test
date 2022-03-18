@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates id="template" xml:space="preserve">
-    <xpath expr="//div[@t-name='sale_stock.qtyAtDate']" position="replace">
-        <div>
-            hell
-        </div>
-    </xpath>
+    <t t-inherit="sale_stock.qtyAtDate" t-operation="replace">
+        <xpath expr="//div" position="replace">
+            <div t-att-class="!widget.data.display_qty_widget ? 'invisible' : ''">
+                <a tabindex="0" t-attf-class="fa fa-area-chart {{ widget.data.forecasted_issue ? 'text-danger' : widget.data.qty_available_today &gt; 5 ? 'text-primary' : 'text-warning'}}"/>
+            </div>
+        </xpath>
+    </t>
 </templates>
